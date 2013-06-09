@@ -1,0 +1,14 @@
+
+.canvas {    
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    cursor: crosshair;
+}
+
+
+#canvas_container {
+    position: absolute;
+    width: 900px;
+    height: 900px;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Canvas 2D geometrical constructions</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+        <script type="text/javascript" src="js/Vector2d.js"></script>
+        <script type="text/javascript" src="js/Matrix3x3.js"></script>
+        <script type="text/javascript" src="js/CanvasViewer.js"></script>
+        
+        <script type="text/javascript">
+            function initialize() {                
+                var viewer = new CanvasViewer(document.getElementById("canvas_container"));
+                var style = new DrawStyle();
+                viewer.addCircle(new Vector2d(0,0), 100);
+                style.filled = true;                
+                viewer.addCircle(new Vector2d(100,100), 50, style);
+                style.lineWidth = 3;
+                style.fillStyle = '#ff0000';
+                viewer.addCircle(new Vector2d(-100,-100), 50, style);
+                viewer.run();
+            }
+        </script> 
+    </head>
+
+    <body onload="initialize();">
+        <div id="canvas_container"></div>             
+    </body>
+</html>
